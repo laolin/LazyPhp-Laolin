@@ -1,4 +1,4 @@
-<?php
+<?php 
 $GLOBALS['language']['zh_cn'] = array
 (
 	'login' => '登入',

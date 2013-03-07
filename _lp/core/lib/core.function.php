@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 function transcribe($aList, $aIsTopLevel = true) 
 {

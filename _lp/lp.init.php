@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 if( !defined('AROOT') ) die('NO AROOT!');
 if( !defined('DS') ) define( 'DS' , DIRECTORY_SEPARATOR );

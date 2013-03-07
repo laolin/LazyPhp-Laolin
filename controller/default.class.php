@@ -1,4 +1,4 @@
-<?php
+<?php 
 if( !defined('IN') ) die('bad request');
 include_once( AROOT . 'controller'.DS.'app.class.php' );
 

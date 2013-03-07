@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 // db functions
 function db( $host = null , $port = null , $user = null , $password = null , $db_name = null )

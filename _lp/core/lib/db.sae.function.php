@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 function db_read( $host = null , $port = null , $user = null , $password = null , $db_name = null )
 {
