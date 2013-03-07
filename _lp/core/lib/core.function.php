@@ -54,7 +54,7 @@ function u( $str )
 }
 
 // render functiones
-function render( $data = NULL , $layout = NULL , $sharp = 'default' )
+function render( $data = NULL , $layout = NULL , $sharp = 'sharp-default' )
 {
 	if( $layout == null )
 	{
@@ -75,7 +75,7 @@ function render( $data = NULL , $layout = NULL , $sharp = 'default' )
 	$GLOBALS['layout'] = $layout;
 	$GLOBALS['sharp'] = $sharp;
 	
-	$layout_file = AROOT . 'view/layout/' . $layout . '/' . $sharp . '.tpl.html';
+	$layout_file = AROOT . 'view/' . $layout . '/' . $sharp . '.tpl.php';
 	if( file_exists( $layout_file ) )
 	{
 		@extract( $data );
@@ -83,7 +83,9 @@ function render( $data = NULL , $layout = NULL , $sharp = 'default' )
 	}
 	else
 	{
-		$layout_file = CROOT . 'view/layout/' . $layout . '/' . $sharp .  '.tpl.html';
+		//$layout_file = CROOT . 'view/' . $layout . '/' . $sharp .  '.tpl.php';
+    //core 目录里就不搞一大堆view了，AROOT里没合适的,一律用CROOT里这个简单的view: “_.tpl.php
+		$layout_file = CROOT . 'view/' . $layout . '/' . '_' .  '.tpl.php';
 		if( file_exists( $layout_file ) )
 		{
 			@extract( $data );
@@ -116,8 +118,8 @@ function info_page( $info , $title = '系统消息' )
 	$data['top_title'] = $data['title'] = $title;
 	$data['info'] = $info;
 	
-	render( $data , $layout , 'info' );
-	
+	render( $data , $layout , 'sharp-info' );
+	return $info;
 }
 
 function is_ajax_request()
