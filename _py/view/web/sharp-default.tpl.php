@@ -18,7 +18,7 @@
 }
     </style>
 	<link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
-  <script type='text/javascript' src='static/script/jquery-1.8.0.min.js'></script>
+  <script type='text/javascript' src='http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js'></script>
 	<link rel="stylesheet" href="static/css/style.css" type="text/css" >
 <?php if( isset($css) && is_array( $css ) ): ?>
         <?php foreach( $css as $cfile ): ?><link rel="stylesheet" type="text/css" href="static/css/<?=$cfile?>">

@@ -9,25 +9,5 @@
 <div id="<?php echo g('c')?>-info-box">
   <?php echo $info;
   ?>  
-</div>
-<div>
-  <div id='output'>
-  </div>
-  <div >
-  
-  </div>
-  <span class="hide" id='output-tpl'>
-  <ul>
-  <% _.each(data['items'], function(it) { %> 
-  <li><%= it['title']+it['group']+it['text'] %></li> 
-  <% }); %>
-  <ul>
-  </span>
-</div>
+ </div>
  
- <script>
- $(function(){
-  laolin.fnTemplateRest('#output','#output-tpl',
-      '/git-root/Lazyrest-a/api/laolin_about/list/group=0');
- });
- </script>
