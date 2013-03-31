@@ -11,6 +11,7 @@ class aboutController extends appController
   
   function index()
   {
+    $data=getAppDataDefault();
     $data['js'][]=('http://lib.sinaapp.com/js/underscore/1.3.3/underscore.min.js');
     $data['js'][]=('laolin.main.js');
     $data['title'] = '关于';

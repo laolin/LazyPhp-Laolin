@@ -11,6 +11,7 @@ class homeController extends appController
   
   function index()
   {
+    $data=getAppDataDefault();
     $data['title'] = '首页';
     $data['top_title'] = '首页标题';
     $data['info'] = $this->_get_item(v('b'),false);
