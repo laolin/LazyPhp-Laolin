@@ -9,7 +9,7 @@ class apiController extends appController
   function __construct()
   {
     parent::__construct();
-    $this->appData=$this->_getAppData();
+    $this->appData=array_merge_recursive($this->_getAppData(),getAppDataDefault());
   }
   
   function _getAppData() {
@@ -90,6 +90,9 @@ class apiController extends appController
         break;
       case 'laolin':
         $data['value']='YMSWYTJH';
+        break;
+      case 'test':
+        $data['value']='Test done at '.date('Y-m-d H:i:s').'.';
         break;
       default:
         $data['err_code']=1001;
