@@ -9,7 +9,7 @@ class apiController extends appController
   function __construct()
   {
     parent::__construct();
-    $this->appData=array_merge_recursive($this->_getAppData(),getAppDataDefault());
+    $this->appData=array_merge(getAppDataDefault(),$this->_getAppData());
   }
   
   function _getAppData() {
@@ -48,9 +48,9 @@ class apiController extends appController
   //a:action=index
   //i:item (第三个参数)
   function index()
-  { 
+  {
+    //var_dump($_SERVER);
     return render( $this->appData );
-    var_dump($_SERVER);
   }
   
   //
