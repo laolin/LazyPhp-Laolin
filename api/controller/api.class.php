@@ -58,7 +58,9 @@ class apiController extends appController
   {
     $key=v('i');
     $data = $this->_getValueItem($key,false);
-    ajax_echo( json_encode($data));
+    $js=v('js');
+    $callback=($js==1)?v('callback'):'';//指定回调js函数，就返回一个JS语句，而不是REST数据
+    echoRestfulData($data,$callback);
     
     /*
    echo  
