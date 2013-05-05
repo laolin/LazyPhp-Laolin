@@ -6,6 +6,12 @@ Laolin 的 PHP网站框架。
 
 ##主目录的组成结构
 
+### index.php文件
+主文件，根据特定的条件，选择真正运行的子目录
+
+### .htaccess文件
+是api目录专用的
+
 ### _lp目录
 是从LazyPHP fork来的，其中仅_lp/_lp目录是LazyPHP的核心，是所有APP需要的，其他文件和目录是原LazyPHP的一些示例页面，别的APP运行是不需要这些文件的。（因为它自带了static子目录，故不需要主目录下的static目录）
 
@@ -22,6 +28,3 @@ Laolin 的 PHP网站框架。
 
 ### static目录
 静态文件目录(CSS/JS/IMG)，通常情况下是各子目录的APP所共用的。
-
-### .htaccess文件
-是api目录专用的
