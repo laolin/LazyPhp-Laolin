@@ -2,7 +2,7 @@
   function getAppDataDefault() {
     $aName='Laolin';
     $data['sitelink'] = './';
-    $data['sitename'] = '[Laolin-Api]';
+    $data['sitename'] = c('site_name');
     $data['toptitle'] = 'index';
     
     $data['appname']=$aName;
