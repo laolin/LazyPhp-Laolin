@@ -8,8 +8,8 @@
     <meta name="author" content="LaoLin">
 
     <!-- Le styles -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/css/laolin.s_boxes.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/laolin.s_boxes.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -29,15 +29,15 @@
       }
     </style>
     <?php if( isset($css) && is_array( $css ) ): ?>
-        <?php foreach( $css as $cfile ): ?><link rel="stylesheet" type="text/css" href="../static/css/<?=$cfile?>">
+        <?php foreach( $css as $cfile ): ?><link rel="stylesheet" type="text/css" href="static/css/<?=$cfile?>">
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <link href="../static/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
 
-    <script src="../static/js/jquery-1.8.0.min.js"></script>
-    <script src="../static/js/underscore-min.js"></script>
-    <script src="../static/js/backbone-min.js"></script>
+    <script src="static/js/jquery-1.8.0.min.js"></script>
+    <script src="static/js/underscore-min.js"></script>
+    <script src="static/js/backbone-min.js"></script>
 
     
 
@@ -75,11 +75,11 @@
         
     </div><!--/.fluid-container-->
     
-    <script src="../static/js/bootstrap.min.js"></script>
-    <!-- s cript src="../static/js/hammer.min.js"></scrip t -->
-    <script src="../static/js/laolin.main.js"></script>
-    <script src="../static/js/laolin.router.js"></script>
-    <script src="../static/js/laolin.s_boxes.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- s cript src="static/js/hammer.min.js"></scrip t -->
+    <script src="static/js/laolin.main.js"></script>
+    <script src="static/js/laolin.router.js"></script>
+    <script src="static/js/laolin.s_boxes.js"></script>
      <script>
       function set_main_box(htm) {
         $('#opt-main-box').html(htm);
@@ -93,7 +93,7 @@
         if(strpos($jfile,'://')!=0)
           echo "<script type='text/javascript' src='$jfile' ></script>";
         else
-          echo "<script type='text/javascript' src='../static/js/$jfile' ></script>";
+          echo "<script type='text/javascript' src='static/js/$jfile' ></script>";
         endforeach; ?>
   <?php endif; ?>
   </body>

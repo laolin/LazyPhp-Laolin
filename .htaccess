@@ -3,7 +3,7 @@ RewriteEngine On
 # RewriteBase /
 
 #当前目录，不列出目录，跳到api目录
-RewriteRule ^/?$   %{REQUEST_URI}api/ [R,L]
+#RewriteRule ^/?$   %{REQUEST_URI}api/ [R,L]
 
 #static/目录下的，直接跳到api/statci/目录下
 #RewriteRule ^static/(.+)   api/static/$1 [L]
