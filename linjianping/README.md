@@ -1,13 +1,12 @@
-LinApi - api目录说明
+LinApi - linjianping目录说明
 ======
-是api.laolin.com的代码
+是linjianping目录说明.com的代码
 
 
 ## 说明
 运行此目录的APP需要：
-* api/目录（本目录）
+* linjianping目录说明/目录（本目录）
 * ../index.php文件
-* ../.htaccess文件
 * ../_lp/_lp目录
 * ../static目录
 
