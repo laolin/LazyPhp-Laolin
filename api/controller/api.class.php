@@ -14,8 +14,6 @@ class apiController extends appController
   
   function _getAppData() {
     $aName=$this->appName;
-    $data['sitelink'] = './';
-    $data['sitename'] = '[Laolin-Api]';
     $data['toptitle'] = 'index';
     
     $data['appname']=$aName;
