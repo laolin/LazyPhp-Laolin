@@ -1,6 +1,6 @@
 <?php
   function getAppDataDefault() {
-    $aName='Laolin';
+    $aName='LinJianPing';
     $data['sitelink'] = './';
     $data['sitename'] = c('site_name');
     $data['toptitle'] = '欢迎光临';
