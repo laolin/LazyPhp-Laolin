@@ -11,18 +11,53 @@ class homeController extends appController
   
   function index()
   {
-    //'http://api.laolin.com/rest/api/laolin_about/list/';
   
-    //使用lazyRest的API，直接读wordpress的指定page的全部子页面的数据
-    //我的Wordpress的简历页面的ID为4132,这个页面内容没有用
-    //所有的子页面对应简历的一个内容, 这些会由LazyREST api返回给本页面JSON数据
+    $b=v('b');
+    switch($b) {
+        //使用lazyRest的API，直接读wordpress的指定 页面的数据
+      case 'contact':
+        //我的Wordpress的联系页面的ID为4168
+        $this->_showSomePost('ID=4168','联系方式');
+        break;
+      
+      case 'projects':
+        $this->_showSomePost('ID=4161','工程项目');
+        break;
+      case 'awards':
+        $this->_showSomePost('ID=4163','获奖情况');
+        break;
+      case 'publications':
+        $this->_showSomePost('ID=4165','发表论文');
+        break;
+      case 'hobbies':
+        $this->_showSomePost('ID=4180','业余爱好');
+        break;
+      default:      
+        //使用lazyRest的API，直接读wordpress的指定page的全部子页面的数据
+        //我的Wordpress的简历页面的ID为4132,这个页面内容没有用
+        //所有的子页面对应简历的一个内容, 这些会由LazyREST api返回给本页面JSON数据
+        $this->_showSomePost('post_parent=4132&post_status=publish','林建萍的网站首页');
+    }
+  }
+  function _showSomePost($query,$title){
+  
+    //使用lazyRest的API，直接读wordpress的指定 条件 页面或文章,
+    //会由LazyREST api返回给本页面JSON数据
     //（LazyRest api系统在另外的APP里实现）
-    //REST api输入参数post_parent=4132&post_status=publish
+    //REST api输入参数id=4168
     //REST api输出字段post_content, post_title, menu_order
-    $url='http://api.laolin.com/rest/api/wp4_posts/list/post_parent=4132&post_status=publish';
+    $url='http://api.laolin.com/rest/api/wp4_posts/list/'.$query;
     
     $data=getAppDataDefault();
-    $data['toptitle'] = '林建萍的网站首页';
+    $data['nav_items']=array();
+    $data['nav_items']["?b=index"]='简历';
+    $data['nav_items']["?b=projects"]='工程项目';
+    $data['nav_items']["?b=awards"]='获奖情况';
+    $data['nav_items']["?b=publications"]='发表论文';
+    $data['nav_items']["?b=hobbies"]='业余爱好';
+    $data['nav_items']["?b=contact"]='联系方式';
+    
+    $data['toptitle'] = $title;
     $data['css'][]='comm-box.css';
     
     $rest=file_get_contents($url);
@@ -41,25 +76,9 @@ class homeController extends appController
     }
     return render( $data );
   }  
-  function _get_item($item,$disp=true) {
-    $str='';
-    switch($item) {
-      case 'site':
-        $str.= 'index site关于本站';
-        break;
-      case 'hhxx':
-        $str.= 'index hhxx 关于 ';
-        break;
-      case 'anyi':
-        $str.= 'index anyi关于';
-        break;
-      case 'laolin':
-      default:
-        $str.= 'index laolin 关于老林';
-    }
-    if($disp)echo $str;
-    return $str;
-  }
+  
+  
+  
 
 }
   
