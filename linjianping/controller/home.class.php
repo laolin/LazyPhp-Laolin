@@ -11,27 +11,33 @@ class homeController extends appController
   
   function index()
   {
+    //'http://api.laolin.com/rest/api/laolin_about/list/';
+  
+    //使用lazyRest的API，直接读wordpress的指定page的全部子页面的数据
+    //我的Wordpress的简历页面的ID为4132,这个页面内容没有用
+    //所有的子页面对应简历的一个内容, 这些会由LazyREST api返回给本页面JSON数据
+    //（LazyRest api系统在另外的APP里实现）
+    //REST api输入参数post_parent=4132&post_status=publish
+    //REST api输出字段post_content, post_title, menu_order
+    $url='http://api.laolin.com/rest/api/wp4_posts/list/post_parent=4132&post_status=publish';
+    
     $data=getAppDataDefault();
     $data['toptitle'] = '林建萍的网站首页';
+    $data['css'][]='comm-box.css';
     
-    $rest_server=(isset($_SERVER['HTTPS'])?'https://':'http://').$_SERVER['SERVER_NAME'];
-    $rest_path=c('laolin_about_api_url'); 
-    //如果设置文件里不是以http开关，就在地址前加上“http://当前网站”
-    $url=substr_compare('http',$rest_path,0,4,true)?$rest_server.$rest_path:$rest_path;
-
-    
-    $rest=file_get_contents($url."group=about-laolin");
+    $rest=file_get_contents($url);
     $res=json_decode($rest,true);
     
     if($res['err_code']!=0) {
       $data['about_laolin'][]=
-          array('text'=>'Error: ['.$res['err_code'].'] '.$res['err_msg']);
+          array('post_content'=>'Error: ['.$res['err_code'].'] '.$res['err_msg']);
     } else {
       $data['about_laolin']=$res['data']['items'];
-      foreach ($data['about_laolin'] as $key => $row) {
-        $data_id[$key]  = $row['id'];
+       foreach ($data['about_laolin'] as $key => $row) {
+        $menu_order[$key]  = +$row['menu_order'];
+        $data['about_laolin'][$key]['post_content']=nl2br($row['post_content']);
       }
-      array_multisort($data_id, SORT_ASC, $data['about_laolin']);
+      array_multisort($menu_order, SORT_ASC, $data['about_laolin']);
     }
     return render( $data );
   }  

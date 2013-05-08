@@ -9,4 +9,3 @@ $GLOBALS['config']['default_action'] = 'index';
 $GLOBALS['config']['404_controller'] = 'home';
 $GLOBALS['config']['404_action'] = 'index';
 
-$GLOBALS['config']['laolin_about_api_url'] =  'http://api.laolin.com/rest/api/laolin_about/list/';
