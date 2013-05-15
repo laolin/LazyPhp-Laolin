@@ -1,6 +1,7 @@
 <?php
 if( !defined('IN') ) die('bad request');
 include_once( AROOT . 'controller'.DS.'app.class.php' );
+error_reporting(0);
 
 class homeController extends appController
 {
