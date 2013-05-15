@@ -30,7 +30,7 @@ class homeController extends appController
         $this->_showSomePost('ID=4165','发表论文');
         break;
       case 'hobbies':
-        $this->_showSomePost('ID=4180','业余爱好');
+        $this->_showSomePost('ID=4180','兴趣爱好');
         break;
       default:      
         //使用lazyRest的API，直接读wordpress的指定page的全部子页面的数据
@@ -54,7 +54,7 @@ class homeController extends appController
     $data['nav_items']["?b=projects"]='工程项目';
     $data['nav_items']["?b=awards"]='获奖情况';
     $data['nav_items']["?b=publications"]='发表论文';
-    $data['nav_items']["?b=hobbies"]='业余爱好';
+    $data['nav_items']["?b=hobbies"]='兴趣爱好';
     $data['nav_items']["?b=contact"]='联系方式';
     
     $data['toptitle'] = $title;
