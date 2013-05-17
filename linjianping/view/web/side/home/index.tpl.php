@@ -1,7 +1,8 @@
 <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">LinJianPing.com</li>
-              <li class=" "><a href="http://laolin.com/" target="_blank">LaoLin.com</a></li>
+              <li class=" "><a href="http://LaoLin.com/" target="_blank">LaoLin.com</a></li>
+              <li class=" "><a href="http://AnQiuXiang.com/" target="_blank">AnQiuXiang.com</a></li>
               <li class=" "><a href="http://iTongji.org/" target="_blank">iTongji.org</a></li>
               <li class=" "><a href="http://TongJiAD.com/" target="_blank">TongJiAD.com</a></li>
               <li class=" "><a href="http://PingLiPou.com/" target="_blank">PingLiPou.com</a></li>
