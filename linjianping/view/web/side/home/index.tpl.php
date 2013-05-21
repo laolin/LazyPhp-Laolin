@@ -4,7 +4,10 @@
               <?php  foreach($nav_items as  $item => $v) {
               echo "<li><a href='$item' class=''>$v</a></li>";
                 } ?>
+            </ul>   
+            <ul class="nav nav-list hidden-phone">
                 
+              <li class="nav-header"> </li>
               <li class="nav-header">LaoLin系列</li>
               <li class=" "><a href="http://LaoLin.com/lin/" target="_blank">老林日记</a></li>
               <li class=" "><a href="http://laolin.com/t/huoxing/" target="_blank">老林火星文</a></li>
