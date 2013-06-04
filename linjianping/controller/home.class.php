@@ -51,7 +51,7 @@ class homeController extends appController
     
     $data=getAppDataDefault();
     $data['nav_items']=array();
-    $data['nav_items']["?b=index"]='简历';
+    $data['nav_items']["?b=index"]='简介';
     $data['nav_items']["?b=projects"]='工程项目';
     $data['nav_items']["?b=awards"]='获奖情况';
     $data['nav_items']["?b=publications"]='发表论文';
