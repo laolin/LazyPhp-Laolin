@@ -1,6 +1,6 @@
 <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">林建萍简历</li>
+              <li class="nav-header">林建萍</li>
               <?php  foreach($nav_items as  $item => $v) {
               echo "<li><a href='$item' class=''>$v</a></li>";
                 } ?>
