@@ -57,6 +57,7 @@ class homeController extends appController
     $data['nav_items']["?b=publications"]='发表论文';
     $data['nav_items']["?b=hobbies"]='兴趣爱好';
     $data['nav_items']["?b=contact"]='联系方式';
+    $data['nav_items']["http://laolin.com/lin/"]='LaoLin BLOG';
     
     $data['toptitle'] = $title;
     $data['css'][]='comm-box.css';
