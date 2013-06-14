@@ -37,7 +37,9 @@ class homeController extends appController
         //使用lazyRest的API，直接读wordpress的指定page的全部子页面的数据
         //我的Wordpress的简历页面的ID为4132,这个页面内容没有用
         //所有的子页面对应简历的一个内容, 这些会由LazyREST api返回给本页面JSON数据
-        $this->_showSomePost('post_parent=4132&post_status=publish','林建萍(LaoLin) 同济大学建筑设计研究院（集团）有限公司 高级工程师 一级注册结构工程师');
+        $this->_showSomePost('post_parent=4132&post_status=publish','林建萍'.
+      ($_SERVER['HTTP_HOST']=='laolin.com'?'(LaoLin)':'') . 
+        ' 同济大学建筑设计研究院（集团）有限公司 高级工程师 一级注册结构工程师');
     }
   }
   function _showSomePost($query,$title){
