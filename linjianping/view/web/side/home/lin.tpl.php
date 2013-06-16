@@ -1,12 +1,13 @@
+<div class="span3">
 <div class="well sidebar-nav">
-            <ul class="nav nav-list">
+            <ul class="nav nav-pills nav-stacked">
               <li class="nav-header">林建萍</li>
               <?php  foreach($nav_items as  $item => $v) {
               echo "<li><a href='$item' class=''>$v</a></li>";
                 } ?>
             </ul>  
 </div><!--/.well -->
-
+</div><!--/span3 -->
 
 
             

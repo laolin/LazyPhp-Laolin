@@ -21,12 +21,21 @@ class homeController extends appController
     $this->data['nav_items']["http://laolin.com/lin/"]='LaoLin BLOG';
     
     $this->data['css'][]='comm-box.css';
+    $this->data['css'][]='metro-box.css';
   }
   
   function firstpage(){
     $this->data['toptitle'] = '林建萍'.
       ($_SERVER['HTTP_HOST']=='laolin.com'?'(LaoLin)':'') . 
         ' 同济大学建筑设计研究院（集团）有限公司 高级工程师 一级注册结构工程师';
+        
+        /*
+  OBJ：      
+lineheight:1,2,3  _____\ 【DiV class='metbox-row-s1'】 
+lineData: (array) 
+  情况1：width, 【color, head,text,link】 ______\  【b class='span6 metbox metbox-green'】
+  情况2：width, 【OBJ】  ______\  【span class='span3'】
+  
     $this->data['items']=array();
     $this->data['items'][]=array(
       'title'=>'老林简介',
@@ -40,7 +49,7 @@ class homeController extends appController
       'img'=>'http://files.laolin.com/images/linjp-2012.9.3-180x180.jpg',
       'link'=>'http://laolin.com/lin/'
       );
-    
+    */
     return render( $this->data );
   }
   function lin()

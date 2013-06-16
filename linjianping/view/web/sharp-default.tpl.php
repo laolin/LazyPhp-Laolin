@@ -12,7 +12,7 @@
     <link href="static/css/laolin.s_boxes.css" rel="stylesheet">
     <style type="text/css">
       body {
-        padding-top: 60px;
+        padding-top: 70px;
         padding-bottom: 40px;
       }
       .sidebar-nav {
@@ -28,10 +28,6 @@
         }
       }
     </style>
-    <?php if( isset($css) && is_array( $css ) ): ?>
-        <?php foreach( $css as $cfile ): ?><link rel="stylesheet" type="text/css" href="static/css/<?=$cfile?>">
-        <?php endforeach; ?>
-    <?php endif; ?>
 
     <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -39,6 +35,10 @@
     <script src="static/js/underscore-min.js"></script>
     <script src="static/js/backbone-min.js"></script>
 
+    <?php if( isset($css) && is_array( $css ) ): ?>
+        <?php foreach( $css as $cfile ): ?><link rel="stylesheet" type="text/css" href="static/css/<?=$cfile?>">
+        <?php endforeach; ?>
+    <?php endif; ?>
     
 
     <!-- Fav and touch icons -->
@@ -51,14 +51,12 @@
     <div class="container-fluid">
       <div class="row-fluid" id="opt-main-box">
       
-        <div class="span3">
       <?php  
       $tfile = 'view' . DS  . 'web' . DS . 'side' . DS . g('c') . DS . g('a') . '.tpl.php';
       if( file_exists( AROOT . $tfile ) ) include( AROOT . $tfile );
       else @include_once( dirname(__FILE__) ) . DS . 'side.inc.php';
        ?>
-        </div>
-        <div class="span9">
+        
        
           <?php 
       $tfile = 'view' . DS  . 'web' . DS . 'main' . DS . g('c') . DS . g('a') . '.tpl.php';
@@ -67,7 +65,6 @@
       ?> 
 
      
-        </div>
       </div><!--/row-->
       
      <?php @include_once( dirname(__FILE__) ) . DS . 'footer.inc.php'; ?>

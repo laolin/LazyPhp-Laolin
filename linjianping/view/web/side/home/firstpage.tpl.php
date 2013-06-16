@@ -1,10 +1,2 @@
-<div class="well sidebar-nav"><!--side nav-->
-            <ul class="nav nav-list">
-              <li class="nav-header">林建萍</li>
-              <?php  foreach($items as  $item => $v) {
-              echo "<li><a href='{$v[link]}' class=''>{$v[title]}</a></li>";
-                } ?>
-            </ul>  
-</div><!--/.well -->
-
-
+<?php
+//需要一个空文件，以避免显示默认的side bar
