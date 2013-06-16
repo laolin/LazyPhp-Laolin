@@ -5,14 +5,14 @@
 
 
 
-<DiV class='metbox-row-s3'>
+<DiV class='metbox-row metbox-row-s5'>
   <b class='span4 metbox metbox-blue'>
     <h2>1 HEad中文老林</h2>
     <img src='http://files.laolin.com/images/qrcode_for_laolin-jg_258.jpg'/>
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> text 中文老林test text 中文老林test text 中文老林test text 中文老林test text 中文老林<a href='#'>老林test</a> test text 中文老林test text 中文老林</p>
   </b>
   <span class='span8'>
-    <DiV class='metbox-row-s2'>
+    <DiV class='metbox-row metbox-row-s2'>
       <b class='span6 metbox metbox-green'> 
           <h2>乱78糟地搞一个Metro风格的界面</h2>
     <img src='http://files.laolin.com/images/linjp-2012.9.3-180x180.jpg'/>
@@ -21,12 +21,12 @@
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> ABV ABC abc</p>
       </b>
       <span class='span3'>
-        <DiV class='metbox-row-s1'>
+        <DiV class='metbox-row metbox-row-s1'>
           <b class='span12 metbox metbox-red'>3
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> ABV ABC abc</p>
           </b>
         </DiV>
-        <DiV class='metbox-row-s1'>
+        <DiV class='metbox-row metbox-row-s1'>
           <b class='span12 metbox metbox-yellow'>
           4 4 4
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> ABV ABC abc</p>
@@ -40,7 +40,7 @@
       </b>
     </DiV>
     
-    <DiV class='metbox-row-s1'>
+    <DiV class='metbox-row metbox-row-s1'>
       <b class='span3 metbox metbox-pink'> 
       6 6 6
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> ABV ABC abc</p>
@@ -54,16 +54,21 @@
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> ABV ABC abc</p>
       </b>
     </DiV>
+    <DiV class='metbox-row metbox-row-s2'>
+      <b class='span12 metbox metbox-red'> 
+      testtetstee
+      </b>
+    </DiV>
   </span>
 </DiV> 
-<DiV class='metbox-row-s1'> 
+<DiV class='metbox-row metbox-row-s1'> 
   <b class='span2 metbox metbox-magenta'>
     99999999999
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> ABV ABC abc</p>
   </b>
   <b class='span2 metbox metbox-purple'>1b 1 aaf</b>
   <span class='span6'>
-    <DiV class='metbox-row-s1'> 
+    <DiV class='metbox-row metbox-row-s1'> 
       <b class='span6 metbox metbox-teal'>
       100000000
     <p>test text 中文老林test text 中文<a href='#'>老林test</a> ABV ABC abc</p>

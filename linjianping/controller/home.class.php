@@ -21,7 +21,7 @@ class homeController extends appController
     $this->data['nav_items']["http://laolin.com/lin/"]='LaoLin BLOG';
     
     $this->data['css'][]='comm-box.css';
-    $this->data['css'][]='metro-box.css';
+    $this->data['css'][]='laolin.metro.box.css';
   }
   
   function firstpage(){
