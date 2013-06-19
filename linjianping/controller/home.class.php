@@ -39,12 +39,12 @@ class homeController extends appController
               { "width":8, "rows":[
                   { "height":2, "data":[
                     { "width":6,
-                      "content":{"color":"green", "title":"微信","text":"老林的微信公众号","link":"http://a/"}
+                      "content":{"color":"green", "title":"微信","text":"老林的微信公众号","link":"http://laolin.com/lin/?p=4406"}
                     },
                     { "width":3,"rows":[
                       { "height":1, "data":[
                           { "width":12,
-                            "content":{"color":"red", "title":"老林3","text":"老林介绍","link":"./?a=lin&b=index"}
+                            "content":{"color":"red", "title":"老林3","text":"老林介绍<a href=\'http://linjianping.com\'>test link to linjianping.com</a>","link":"./?a=lin&b=index"}
                           }
                       ]},
                       { "height":1, "data":[
@@ -84,27 +84,6 @@ class homeController extends appController
       $main_rows=json_decode($json_rows,true);
       $txt=$this->_show_metro_box($main_rows);
       $this->data['main_content']= $txt;
-        /*
-  OBJ：      
-lineheight:1,2,3  _____\ 【DiV class='metbox-row-s1'】 
-lineData: (array) 
-  情况1：width, 【color, head,text,link】 ______\  【b class='span6 metbox metbox-green'】
-  情况2：width, 【OBJ】  ______\  【span class='span3'】
-  
-    $this->data['items']=array();
-    $this->data['items'][]=array(
-      'title'=>'老林简介',
-      'text'=>'老林简介：结构工程师技术简历。',
-      'img'=>'http://files.laolin.com/images/linjp-2012.9.3-180x180.jpg',
-      'link'=>'?a=lin&b=index'
-      );
-    $this->data['items'][]=array(
-      'title'=>'老林日记',
-      'text'=>'老林日记，老林平时记录的杂事。',
-      'img'=>'http://files.laolin.com/images/linjp-2012.9.3-180x180.jpg',
-      'link'=>'http://laolin.com/lin/'
-      );
-    */
     return render( $this->data );
   }
   function lin()
@@ -148,11 +127,9 @@ lineData: (array)
           $str.=$this->_show_metro_box($item);
           $str.="\n</span>";
         }else{//TODO:错误处理
-          $str.="\n<b class='span{$item[width]} metbox metbox-{$item[content][color]}'>";
-          $str.="\n<a href='{$item[content][link]}'>";
-          $str.="\n<h2>{$item[content][title]}</h2>";
+          $str.="\n<b onclick='location.href=\"{$item[content][link]}\"' class='span{$item[width]} metbox metbox-{$item[content][color]}'>";
+          $str.="\n<h2><a href='{$item[content][link]}'>{$item[content][title]}</a></h2>";
           $str.="\n<p>{$item[content][text]}</p>";
-          $str.="\n</a>";
           $str.="\n</b>";
         }
       }
