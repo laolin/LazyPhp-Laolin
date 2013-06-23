@@ -30,6 +30,12 @@ div.metbox-row  > b{
   div.metbox-row-s5 > b{
     height: 740px;
   }
+  div.metbox-row-s6 > b{
+    height: 890px;
+  }
+  div.metbox-row-s7 > b{
+    height: 1040px;
+  }
 }
 @media (max-width: 767px) {
 
@@ -94,45 +100,29 @@ b.metbox-teal {
 }
 
 
-div.metbox-row-s1 > b h2 ,
-div.metbox-row-s2 > b h2 ,
-div.metbox-row-s3 > b h2 {
+div.metbox-row > b h2 {
   font-size:1.5em;
 }
 
 
-div.metbox-row-s1 > b , 
-div.metbox-row-s1 > b p,
-div.metbox-row-s2 > b , 
-div.metbox-row-s2 > b p,
-div.metbox-row-s3 > b , 
-div.metbox-row-s3 > b p {
+div.metbox-row > b , 
+div.metbox-row > b p {
   color: #eee;
   text-decoration: none;
 }
 
-div.metbox-row-s1 > b.metbox-yellow , 
-div.metbox-row-s1 > b.metbox-yellow p,
-div.metbox-row-s2 > b.metbox-yellow , 
-div.metbox-row-s2 > b.metbox-yellow p,
-div.metbox-row-s3 > b.metbox-yellow , 
-div.metbox-row-s3 > b.metbox-yellow p {
+div.metbox-row > b.metbox-yellow , 
+div.metbox-row > b.metbox-yellow p {
   color: #333;
 }
 
-div.metbox-row-s1 > b a ,
-div.metbox-row-s1 > b a:active,
-div.metbox-row-s2 > b a ,
-div.metbox-row-s2 > b a:active,
-div.metbox-row-s3 > b a ,
-div.metbox-row-s3 > b a:active {
+div.metbox-row > b a ,
+div.metbox-row > b a:active {
   color: #3f3;
   text-decoration: none;
 }
 
-div.metbox-row-s1 > b a:hover ,
-div.metbox-row-s2 > b a:hover ,
-div.metbox-row-s3 > b a:hover {
+div.metbox-row > b a:hover {
   text-decoration: underline;
 }
 

@@ -29,58 +29,8 @@ class homeController extends appController
       ($_SERVER['HTTP_HOST']=='laolin.com'?'(LaoLin)':'') . 
         ' 同济大学建筑设计研究院（集团）有限公司 高级工程师 一级注册结构工程师';
      
-
-      $json_rows='
-        { "rows":[
-          { "height":3, "data":[
-              { "width":4,
-                "content":{"color":"red", "title":"老林","text":"老林介绍","link":"./?a=lin&b=index"}
-              },
-              { "width":8, "rows":[
-                  { "height":2, "data":[
-                    { "width":6,
-                      "content":{"color":"green", "title":"微信","text":"老林的微信公众号","link":"http://laolin.com/lin/?p=4406"}
-                    },
-                    { "width":3,"rows":[
-                      { "height":1, "data":[
-                          { "width":12,
-                            "content":{"color":"red", "title":"老林3","text":"老林介绍<a href=\'http://linjianping.com\'>test link to linjianping.com</a>","link":"./?a=lin&b=index"}
-                          }
-                      ]},
-                      { "height":1, "data":[
-                          { "width":12,
-                            "content":{"color":"red", "title":"老林4","text":"老林介绍","link":"./?a=lin&b=index"}
-                          }
-                      ]}
-
-                    ]},
-                    { "width":3,
-                      "content":{"color":"green", "title":"微信","text":"老林的微信公众号","link":"http://a/"}
-                    }
-                  ]},
-                  { "height":1, "data":[
-                    { "width":3,
-                      "content":{"color":"blue", "title":"老林test34","text":"老林介绍4","link":"./?4"}
-                    },
-                    { "width":6,
-                      "content":{"color":"blue", "title":"老林test34","text":"老林介绍4","link":"./?4"}
-                    },
-                    { "width":3,
-                      "content":{"color":"blue", "title":"老林test34","text":"老林介绍4","link":"./?4"}
-                    }
-                  ]}
-              ]}
-          ]}, 
-          { "height":1, "data":[
-            { "width":3,
-              "content":{"color":"green", "title":"微信5","text":"老林的微信公众号5","link":"http://5"}
-            },
-            { "width":9,
-              "content":{"color":"green", "title":"微信6","text":"6老林的微信公众号","link":"http://6"}
-            }
-          ]}
-        ]}
-      ';
+      uses('app.data.php');
+      $json_rows=MetorData();
       $main_rows=json_decode($json_rows,true);
       $txt=$this->_show_metro_box($main_rows);
       $this->data['main_content']= $txt;
@@ -120,7 +70,7 @@ class homeController extends appController
   function _show_metro_box($main_rows){
     $str='';
     foreach($main_rows['rows'] as $r) {
-      $str.="\n<div class='metbox-row metbox-row-s{$r[height]}'>";
+      $str.="\n<div class='row-fluid metbox-row metbox-row-s{$r[height]}'>";
       foreach($r['data'] as $item){
         if(isset($item['rows'])){//递归
           $str.="\n<span class='span{$item[width]}'>";
