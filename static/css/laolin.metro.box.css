@@ -98,6 +98,12 @@ b.metbox-magenta {
 b.metbox-teal {
   background-color: #00aba9;
 }
+b.metbox-white {
+  background-color: #eeeeee;
+}
+b.metbox-black {
+  background-color: #111111;
+}
 
 
 div.metbox-row > b h2 {
@@ -111,6 +117,8 @@ div.metbox-row > b p {
   text-decoration: none;
 }
 
+div.metbox-row > b.metbox-white , 
+div.metbox-row > b.metbox-white p , 
 div.metbox-row > b.metbox-yellow , 
 div.metbox-row > b.metbox-yellow p {
   color: #333;

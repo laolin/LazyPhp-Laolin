@@ -77,7 +77,7 @@ class homeController extends appController
           $str.=$this->_show_metro_box($item);
           $str.="\n</span>";
         }else{//TODO:错误处理
-          $str.="\n<b onclick='location.href=\"{$item[content][link]}\"' class='span{$item[width]} metbox metbox-{$item[content][color]}'>";
+          $str.="\n<b x_onclick='location.href=\"{$item[content][link]}\"' class='span{$item[width]} metbox metbox-{$item[content][color]}'>";
           $str.="\n<h2><a href='{$item[content][link]}'>{$item[content][title]}</a></h2>";
           $str.="\n<p>{$item[content][text]}</p>";
           $str.="\n</b>";
