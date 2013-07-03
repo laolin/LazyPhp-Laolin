@@ -22,6 +22,7 @@ class homeController extends appController
     
     $this->data['css'][]='comm-box.css';
     $this->data['css'][]='laolin.metro.box.css';
+    $this->data['js'][]='jquery.cookie.js';
   }
   
   function firstpage(){
