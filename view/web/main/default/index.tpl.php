@@ -11,7 +11,7 @@ LP采用函数式接口封装对象，对内通过面向对象实现代码重用
             <p><a class="btn btn-primary btn-large" href="http://ftqq.com/lazyphp/" target="_blank">帮助文档 &raquo;</a></p>
           </div>
           <div class="row-fluid">
-            <div class="span4">
+            <div class="col-12 col-lg-4 col-sm-4">
               <h2>Ajax</h2>
               <p><div id="iii"><a href="javascript:loadit()">点我通过Ajax加载页面</a></div> </p>
               <p><a href="?c=default&a=test" target="_blank">通过Web请求test Action</a></p>
@@ -24,8 +24,8 @@ LP采用函数式接口封装对象，对内通过面向对象实现代码重用
 <input type="text" name="user" value="LazyPHP" />
 <input type="button" class="btn" value="通过Ajax提交form，form内显示提示" onclick="send_form_in( 'theform2' )" />
 </form>
-            </div><!--/span-->
-            <div class="span4">
+            </div><!--/col 4-->
+            <div class="col-12 col-lg-4 col-sm-4">
               <h2>多层Layout</h2>
               <p> <a href="?c=default&a=rest" target="_blank">Rest Layout 正确返回值</a></p>
               <p><a href="?c=default&a=rest&o=1" target="_blank">错误返回值</a></p>
@@ -34,12 +34,12 @@ LP采用函数式接口封装对象，对内通过面向对象实现代码重用
               <p><a href="?c=default&a=about" target="_blank">about</a></p>
               <p><a href="?c=default&a=contact" target="_blank">contact</a></p>
              
-            </div><!--/span-->
-            <div class="span4">
+            </div><!--/col 4-->
+            <div class="col-12 col-lg-4 col-sm-4">
               <h2>单元测试</h2>
               <p> <a href="test/index.html" target="_blank">集成JSUnit测试框架：Qunit</a></p>
               <p><a href="test/index.php" target="_blank">集成PHPUnit测试框架：SimpleTest</a> </p>
-            </div><!--/span-->
+            </div><!--/col 4-->
           </div><!--/row-->
          
 

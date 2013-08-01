@@ -36,20 +36,20 @@
  
     <div class="container">
       <div class="row-fluid">
-        <div class="span3">
+        <div class="col-12 col-lg-3 col-sm-3">
             <?php	
 			$tfile = 'view' . DS  . 'web' . DS . 'side' . DS . g('c') . DS . g('a') . '.tpl.php';
 			if( file_exists( AROOT . $tfile ) ) include( AROOT . $tfile );
 			else @include_once( dirname(__FILE__) ) . DS . 'side.inc.php';
 			 ?>
-        </div><!--/span-->
-        <div class="span9">
+        </div><!--/col 3-->
+        <div class="col-12 col-lg-9 col-sm-9">
           <?php 
 			$tfile = 'view' . DS  . 'web' . DS . 'main' . DS . g('c') . DS . g('a') . '.tpl.php';
 			if( file_exists( AROOT . $tfile ) ) include( AROOT . $tfile );
 			else @include_once( dirname(__FILE__) ) . DS . 'content.inc.php';
 			?>
-        </div><!--/span-->
+        </div><!--/col 9-->
       </div><!--/row-->
 
      <?php @include_once( dirname(__FILE__) ) . DS . 'footer.inc.php'; ?>
